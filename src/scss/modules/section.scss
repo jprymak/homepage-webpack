@@ -1,0 +1,42 @@
+$myFavouriteGreen:rgba(44, 180, 56, 0.596);
+
+@mixin marginBorderRadius($margin, $border-radius ){
+    margin: $margin;
+    border-radius: $border-radius;  
+}
+.section {
+    border: 1px solid blue;
+    @include marginBorderRadius(8px, 4px);
+    &__header {
+      border-bottom: 1px solid blue;
+      padding: 0 0 4px 0;
+      padding: 8px;
+      margin-top: 0px;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 16px;
+        background: green;
+        margin-right: 8px;
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 16px;
+        background: green;
+        margin-left: 8px;
+      }
+    }
+    &__paragraph {
+      padding: 8px;
+    }
+  }
+  
+  .section-list {
+    &__item {
+      padding: 8px;
+    }
+  }
+  

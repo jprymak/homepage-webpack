@@ -2,12 +2,127 @@
 
 @import "_variables";
 @import "modules/hello.scss";
+@import "modules/section.scss";
+
+/*
+{
+    
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight:normal;
+  outline: none; /*Lepiej nie chować
+}
+ul,ol{
+  list-style-type: none;
+}
+*/
+$myFavouriteGreen: rgb(44, 180, 56);
 
 body {
-  background: $wtf;
-  color: #fff;
+  background: rgb(167, 165, 205);
+  background: linear-gradient(
+    90deg,
+    rgba(167, 165, 205, 0.5690651260504201) 1%,
+    rgba(218, 220, 221, 0.4598214285714286) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+.dataAndTime {
+  color: red;
+  grid-column: 2 / 3;
+  margin: 100px 0 16px 0;
+  display:flex;
+  justify-content:center;
+}
+
+.main {
+  border: 4px solid rgb(125, 125, 233);
+  padding: 12px;
+  border-radius: 8px;
+  grid-column: 2 / 3;
+}
+
+.main-header {
+  color: tomato;
+}
+
+.section-header {
+  color: #1460aa;
+}
+
+.diary-header {
+  color: #aa14a3;
+}
+
+h2 {
+  color: #1460aa;
+}
+
+.navigation {
+  padding: 8px 8px 16px 8px;
+  background: $myFavouriteGreen;
   display: flex;
-  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  &__link {
+    font-size: 24px;
+    padding: 8px;
+    text-decoration: none;
+    margin: 1px;
+    flex-grow:1;
+
+    &:hover {
+      color: rgb(212, 99, 24);
+    }
+  }
+}
+
+.footer {
+  background: $myFavouriteGreen;
+  padding: 8px 8px 16px 8px;
+  grid-column: 1 / 4;
+  display: flex;
   justify-content: center;
-  min-height: 100vh;
+}
+
+.image {
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  grid-column: 1 / 4;
+  position: relative;
+  position: fixed;
+  display: block;
+  width: 100vw;
+  height: 70px;
+  background:$myFavouriteGreen;
+}
+
+.hamburger {
+  display: none;
+  background: inherit;
+  position: absolute;
+  position: fixed;
+  right: 3vw;
+  top: 20px;
+}
+
+@media screen and (max-width: 425px) {
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation--js {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
