@@ -17,10 +17,12 @@ ul,ol{
   list-style-type: none;
 }
 */
-$myFavouriteGreen: rgb(44, 180, 56);
-
+$myFavouriteGreen:linear-gradient(90deg, rgba(36,24,0,1) 0%, rgba(255,154,0,1) 0%, rgba(154,164,11,1) 89%);
+html{
+ 
+}
 body {
-  background: rgb(167, 165, 205);
+  
   background: linear-gradient(
     90deg,
     rgba(167, 165, 205, 0.5690651260504201) 1%,
@@ -31,12 +33,18 @@ body {
   grid-template-columns: 1fr 8fr 1fr;
 }
 
+.dark-button{
+  display:block;
+  grid-column:2/3;
+  margin: 8px auto;
+}
 .dataAndTime {
   color: red;
   grid-column: 2 / 3;
   margin: 100px 0 16px 0;
   display:flex;
   justify-content:center;
+  
 }
 
 .main {
@@ -73,8 +81,6 @@ h2 {
     padding: 8px;
     text-decoration: none;
     margin: 1px;
-    flex-grow:1;
-
     &:hover {
       color: rgb(212, 99, 24);
     }
@@ -96,7 +102,6 @@ h2 {
 
 .header {
   grid-column: 1 / 4;
-  position: relative;
   position: fixed;
   display: block;
   width: 100vw;
