@@ -4,6 +4,8 @@
 @import "modules/hello.scss";
 @import "modules/section.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+
 /*
 {
     
@@ -31,6 +33,7 @@ body {
   );
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
+  font-family: 'Raleway', sans-serif;
 }
 
 .dark-button{

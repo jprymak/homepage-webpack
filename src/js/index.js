@@ -1,11 +1,12 @@
 import '../scss/main.scss';
-import moment from 'moment'
+import moment from 'moment';
+
 
 /* place your code below */
 
 console.log('HELLO 🚀')
 
-
+/* hamburger menu */
 const hamburgerButton = document.querySelector(".hamburger");
 const navigation = document.querySelector(".navigation--js");
 
@@ -15,13 +16,14 @@ const hamburgerMenu = () => {
 
 hamburgerButton.addEventListener("click", hamburgerMenu);
 
+/* Data and time */
 const dataAndTime = document.querySelector('.dataAndTime');
 dataAndTime.innerHTML += moment().format("MMM Do YY");  
 
+/* Light and dark mode */
 const darkButton = document.querySelector(".dark-button");
 
 darkButton.addEventListener("click", changeMode);
-
 
 let isDark = false; 
 
