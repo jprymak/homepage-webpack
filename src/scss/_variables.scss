@@ -1,13 +1,6 @@
 $wtf: #2D2241;
 
 :root{
-    --background-color-darkmode: rgb(8, 8, 8);
-    --text-color-darkmode: white;
-    --background-color-lightmode: linear-gradient(
-        90deg,
-        rgba(167, 165, 205, 0.5690651260504201) 1%,
-        rgba(218, 220, 221, 0.4598214285714286) 100%,
-        rgba(0, 212, 255, 1) 100%
-      );
-    --text-color-lightmode: black;
+    --background-color: linear-gradient(90deg, rgba(167, 165, 205, 0.5690651260504201) 1%,rgba(218, 220, 221, 0.4598214285714286) 100%, rgba(0, 212, 255, 1) 100%);
+    --text-color: black;
 }
