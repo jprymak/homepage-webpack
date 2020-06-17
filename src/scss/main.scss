@@ -78,8 +78,10 @@ h2 {
     padding: 8px;
     text-decoration: none;
     margin: 1px;
+    transition: transform 0.4s cubic-bezier(0.02, 0.01, 0.26, 0.99);
     &:hover {
-      color: rgb(212, 99, 24);
+      color: rgb(206, 23, 63);
+      transform: scale(1.15);
     }
   }
 }
